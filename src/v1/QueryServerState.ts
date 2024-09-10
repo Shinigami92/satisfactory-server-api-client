@@ -1,5 +1,9 @@
 import ky from "ky";
 
+export interface QueryServerStateRequest {
+  function: "QueryServerState";
+}
+
 export interface QueryServerStateResponse {
   data: {
     serverGameState: {
@@ -27,7 +31,7 @@ export function buildQueryServerState(baseUrl: string, accessToken: string) {
         },
         json: {
           function: "QueryServerState",
-        },
+        } satisfies QueryServerStateRequest,
       })
       .json<QueryServerStateResponse>();
 }

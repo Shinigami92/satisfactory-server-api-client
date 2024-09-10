@@ -6,4 +6,5 @@ export function buildV1(baseUrl: string, accessToken: string) {
   };
 }
 
+export type * from "./error.js";
 export type * from "./QueryServerState.js";
