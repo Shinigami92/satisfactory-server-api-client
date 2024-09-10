@@ -1,6 +1,16 @@
 export interface ErrorResponse {
+  /**
+   * Machine-friendly code indicating the type of the error that the executed function returned.
+   */
   errorCode: string;
-  errorMessage: string;
+  /**
+   * Human-friendly error message explaining the error.
+   */
+  errorMessage?: string;
+  /**
+   * Additional information about the error, for example, list of parameters that are missing.
+   */
+  errorData?: any;
 }
 
 export interface InvalidTokenErrorResponse extends ErrorResponse {
