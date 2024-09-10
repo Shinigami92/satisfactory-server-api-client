@@ -14,6 +14,7 @@ export function buildV1(baseUrl: string, accessToken: string) {
   };
 }
 
+export type * from "./common.js";
 export type * from "./error.js";
-export type * from "./QueryServerState.js";
 export type * from "./GetServerOptions.js";
+export type * from "./QueryServerState.js";
