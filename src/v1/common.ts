@@ -22,13 +22,27 @@ export function buildApiRequest<
   TRequest extends ApiRequest<string>,
   TResponseData
 >(version: "v1", body: TRequest) {
-  return (baseUrl: string, accessToken: string) => () =>
+  return (options: InternalClientOptions) => () =>
     ky
-      .post(`${baseUrl}/${version}`, {
+      .post(`${options.baseUrl}/${version}`, {
         headers: {
-          Authorization: `Bearer ${accessToken}`,
+          Authorization: `Bearer ${options.accessToken}`,
         },
         json: body,
       })
       .json<ApiSuccessResponse<TResponseData>>();
+}
+
+/**
+ * @internal
+ */
+export interface InternalClientOptions {
+  /**
+   * Base URL of the API server.
+   */
+  baseUrl: string;
+  /**
+   * Access token to use for authentication.
+   */
+  accessToken: string;
 }
