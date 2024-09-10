@@ -5,13 +5,15 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "dev": "node --env-file .env --experimental-strip-types src/index.ts"
+    "dev": "node --env-file .env ./dist/index.js",
+    "preflight": "run-s build dev"
   },
   "dependencies": {
     "ky": "^1.7.2"
   },
   "devDependencies": {
     "@types/node": "22.5.4",
+    "npm-run-all2": "6.2.2",
     "typescript": "5.6.2"
   },
   "packageManager": "pnpm@9.10.0"
