@@ -10,19 +10,14 @@ export interface ClientOptions {
   baseUrl?: string;
   /**
    * Access token to use for authentication.
-   *
-   * @default process.env.ACCESS_TOKEN
    */
-  accessToken?: string;
+  accessToken: string;
 }
 
-export function createClient(options: ClientOptions = {}) {
-  const {
-    baseUrl = "https://localhost:7777/api",
-    accessToken = env.ACCESS_TOKEN,
-  } = options;
+export function createClient(options: ClientOptions) {
+  const { baseUrl = "https://localhost:7777/api", accessToken } = options;
 
-  if (accessToken == null) {
+  if (!accessToken) {
     throw new Error(
       "Access token must be provided in options or ACCESS_TOKEN environment variable"
     );
@@ -39,14 +34,3 @@ export function createClient(options: ClientOptions = {}) {
 }
 
 export type * from "./v1/index.js";
-
-// Following are just debug code
-const client = createClient();
-
-client.v1.QueryServerState().then((response) => {
-  console.log(response);
-});
-
-client.v1.GetServerOptions().then((response) => {
-  console.log(response);
-});

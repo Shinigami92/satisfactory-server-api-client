@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "dev": "node --env-file .env ./dist/index.js",
+    "dev": "node --env-file .env ./test.js",
     "preflight": "run-s build dev"
   },
   "dependencies": {
