@@ -1,4 +1,4 @@
-# Satisfactory Web Server Manager
+# Satisfactory Server API Client
 
 [![npm version](https://badgen.net/npm/v/satisfactory-server-api-client)](https://www.npmjs.com/package/satisfactory-server-api-client)
 [![npm downloads](https://badgen.net/npm/dm/satisfactory-server-api-client)](https://www.npmjs.com/package/satisfactory-server-api-client)
