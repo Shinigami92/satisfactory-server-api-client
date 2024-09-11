@@ -16,6 +16,7 @@
     "dedicated-server-api-wrapper",
     "dedicated-server-api",
     "dedicated-server",
+    "esm",
     "fetch-api",
     "fetch",
     "ky",

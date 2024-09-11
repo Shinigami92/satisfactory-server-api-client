@@ -22,3 +22,11 @@ export interface InsufficientScopeErrorResponse extends ErrorResponse {
   errorCode: "insufficient_scope";
   errorMessage: "The client is missing required privileges to access the given function";
 }
+
+export interface MissingParamsErrorResponse extends ErrorResponse {
+  errorCode: "missing_params";
+  errorData: {
+    missingParameters: string[];
+    invalidParameters: Record<string, unknown>;
+  };
+}

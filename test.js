@@ -1,3 +1,4 @@
+// @ts-check
 import { env } from "node:process";
 import { createClient } from "./dist/index.js";
 
@@ -12,3 +13,13 @@ client.v1.QueryServerState().then((response) => {
 client.v1.GetServerOptions().then((response) => {
   console.log(response);
 });
+
+client.v1
+  .HealthCheck({
+    data: {
+      clientCustomData: "",
+    },
+  })
+  .then((response) => {
+    console.log(response);
+  });

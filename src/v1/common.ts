@@ -19,18 +19,22 @@ export interface ApiSuccessResponse<TData> {
 }
 
 export function buildApiRequest<
-  TRequest extends ApiRequest<string>,
+  TRequest extends ApiRequest<string, unknown>,
   TResponseData
->(version: "v1", body: TRequest) {
-  return (options: InternalClientOptions) => () =>
-    ky
-      .post(`${options.baseUrl}/${version}`, {
-        headers: {
-          Authorization: `Bearer ${options.accessToken}`,
-        },
-        json: body,
-      })
-      .json<ApiSuccessResponse<TResponseData>>();
+>(version: "v1", body: Pick<TRequest, "function">) {
+  return (options: InternalClientOptions) =>
+    (extra?: Omit<TRequest, "function">) =>
+      ky
+        .post(`${options.baseUrl}/${version}`, {
+          headers: {
+            Authorization: `Bearer ${options.accessToken}`,
+          },
+          json: {
+            ...(extra ?? {}),
+            ...body,
+          },
+        })
+        .json<ApiSuccessResponse<TResponseData>>();
 }
 
 /**
