@@ -1,6 +1,6 @@
 {
   "name": "satisfactory-server-api-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Universal Satisfactory Server API client for JavaScript",
   "scripts": {
     "build": "tsc",
