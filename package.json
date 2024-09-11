@@ -2,12 +2,23 @@
   "name": "satisfactory-server-api-client",
   "version": "0.1.0",
   "description": "Universal Satisfactory Server API client for JavaScript",
-  "type": "module",
   "scripts": {
     "build": "tsc",
     "dev": "node --env-file .env ./test.js",
     "preflight": "run-s build dev"
   },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "ky": "^1.7.2"
   },
