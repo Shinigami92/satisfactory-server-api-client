@@ -7,6 +7,34 @@
     "dev": "node --env-file .env ./test.js",
     "preflight": "run-s build dev"
   },
+  "keywords": [
+    "api-client",
+    "api-wrapper",
+    "coffeestain-studios",
+    "coffeestain",
+    "dedicated-server-api-client",
+    "dedicated-server-api-wrapper",
+    "dedicated-server-api",
+    "dedicated-server",
+    "fetch-api",
+    "fetch",
+    "ky",
+    "satisfactory",
+    "typescript"
+  ],
+  "homepage": "https://www.npmjs.com/package/satisfactory-server-api-client",
+  "bugs": {
+    "url": "https://github.com/Shinigami92/satisfactory-server-api-client/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shinigami92/satisfactory-server-api-client.git"
+  },
+  "author": {
+    "name": "Christopher Quadflieg",
+    "email": "chrissi92@hotmail.de",
+    "url": "https://github.com/Shinigami92"
+  },
   "type": "module",
   "exports": {
     ".": {

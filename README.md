@@ -1,5 +1,8 @@
 # Satisfactory Web Server Manager
 
+[![npm version](https://badgen.net/npm/v/satisfactory-server-api-client)](https://www.npmjs.com/package/satisfactory-server-api-client)
+[![npm downloads](https://badgen.net/npm/dm/satisfactory-server-api-client)](https://www.npmjs.com/package/satisfactory-server-api-client)
+
 This is an unofficial HTTP API wrapper for Satisfactory Dedicated Server API.
 
 The project is in an early state and will not document changelogs until v1.0.0 release.  
