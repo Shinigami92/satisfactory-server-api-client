@@ -1,4 +1,8 @@
-import type { ApiRequest, ApiSuccessResponse } from "./common.js";
+import type {
+  ApiRequest,
+  ApiSuccessResponse,
+  BooleanString,
+} from "./common.js";
 import { buildApiRequest } from "./common.js";
 
 export type GetServerOptionsRequest = ApiRequest<"GetServerOptions">;
@@ -8,11 +12,11 @@ export type GetServerOptionsResponseData = {
    * All current server option values. Key is the name of the option, and value is it's stringified value.
    */
   serverOptions: {
-    "FG.DSAutoPause": "True" | "False";
-    "FG.DSAutoSaveOnDisconnect": "True" | "False";
+    "FG.DSAutoPause": BooleanString;
+    "FG.DSAutoSaveOnDisconnect": BooleanString;
     "FG.AutosaveInterval": string;
     "FG.ServerRestartTimeSlot": string;
-    "FG.SendGameplayData": "True" | "False";
+    "FG.SendGameplayData": BooleanString;
     "FG.NetworkQuality": string;
     [key: string]: string;
   };

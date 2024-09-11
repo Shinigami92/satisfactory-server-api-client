@@ -21,14 +21,6 @@ const client = createClient({
   accessToken: "<your-access-token>",
 });
 
-client.v1.QueryServerState().then((response) => {
-  console.log("QueryServerState Response:", response);
-});
-
-client.v1.GetServerOptions().then((response) => {
-  console.log("GetServerOptions Response:", response);
-});
-
 client.v1
   .HealthCheck({
     data: {
@@ -41,5 +33,17 @@ client.v1
 
 client.v1.VerifyAuthenticationToken().then(() => {
   // response will be an empty string if valid
+});
+
+client.v1.QueryServerState().then((response) => {
+  console.log("QueryServerState Response:", response);
+});
+
+client.v1.GetServerOptions().then((response) => {
+  console.log("GetServerOptions Response:", response);
+});
+
+client.v1.GetAdvancedGameSettings().then((response) => {
+  console.log("GetAdvancedGameSettings Response:", response);
 });
 ```

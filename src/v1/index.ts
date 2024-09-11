@@ -1,4 +1,5 @@
 import type { InternalClientOptions } from "./common.js";
+import { buildGetAdvancedGameSettings } from "./GetAdvancedGameSettings.js";
 import { buildGetServerOptions } from "./GetServerOptions.js";
 import { buildHealthCheck } from "./HealthCheck.js";
 import { buildQueryServerState } from "./QueryServerState.js";
@@ -26,11 +27,16 @@ export function buildV1(options: InternalClientOptions) {
      * Retrieves currently applied server options and server options that are still pending application (because of needing session or server restart).
      */
     GetServerOptions: buildGetServerOptions(options),
+    /**
+     * Retrieves currently applied advanced game settings.
+     */
+    GetAdvancedGameSettings: buildGetAdvancedGameSettings(options),
   };
 }
 
 export type * from "./common.js";
 export type * from "./error.js";
+export type * from "./GetAdvancedGameSettings.js";
 export type * from "./GetServerOptions.js";
 export type * from "./HealthCheck.js";
 export type * from "./QueryServerState.js";
