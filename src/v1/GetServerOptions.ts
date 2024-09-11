@@ -27,7 +27,7 @@ export type GetServerOptionsResponse =
 
 export const buildGetServerOptions = buildApiRequest<
   GetServerOptionsRequest,
-  GetServerOptionsResponseData
+  GetServerOptionsResponse
 >("v1", {
   function: "GetServerOptions",
 });

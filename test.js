@@ -7,11 +7,11 @@ const client = createClient({
 });
 
 client.v1.QueryServerState().then((response) => {
-  console.log(response);
+  console.log("QueryServerState Response:", response);
 });
 
 client.v1.GetServerOptions().then((response) => {
-  console.log(response);
+  console.log("GetServerOptions Response:", response);
 });
 
 client.v1
@@ -21,5 +21,9 @@ client.v1
     },
   })
   .then((response) => {
-    console.log(response);
+    console.log("HealthCheck Response:", response);
   });
+
+client.v1.VerifyAuthenticationToken().then((response) => {
+  console.log("VerifyAuthenticationToken Response:", typeof response);
+});

@@ -20,7 +20,7 @@ export interface ApiSuccessResponse<TData> {
 
 export function buildApiRequest<
   TRequest extends ApiRequest<string, unknown>,
-  TResponseData
+  TResponse extends ApiSuccessResponse<unknown> | string
 >(version: "v1", body: Pick<TRequest, "function">) {
   return (options: InternalClientOptions) =>
     (extra?: Omit<TRequest, "function">) =>
@@ -34,7 +34,7 @@ export function buildApiRequest<
             ...body,
           },
         })
-        .json<ApiSuccessResponse<TResponseData>>();
+        .json<TResponse>();
 }
 
 /**

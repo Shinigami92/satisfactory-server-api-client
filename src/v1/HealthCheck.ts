@@ -26,7 +26,7 @@ export type HealthCheckResponse = ApiSuccessResponse<HealthCheckResponseData>;
 
 export const buildHealthCheck = buildApiRequest<
   HealthCheckRequest,
-  HealthCheckResponseData
+  HealthCheckResponse
 >("v1", {
   function: "HealthCheck",
 });

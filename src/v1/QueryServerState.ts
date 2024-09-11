@@ -60,7 +60,7 @@ export type QueryServerStateResponse =
 
 export const buildQueryServerState = buildApiRequest<
   QueryServerStateRequest,
-  QueryServerStateResponseData
+  QueryServerStateResponse
 >("v1", {
   function: "QueryServerState",
 });
