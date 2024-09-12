@@ -1,4 +1,3 @@
-import { env } from "node:process";
 import type { InternalClientOptions } from "./v1/index.js";
 import { buildV1 } from "./v1/index.js";
 
@@ -29,9 +28,6 @@ export function createClient(options: ClientOptions): Client {
   }
 
   const internalOptions: InternalClientOptions = { baseUrl, accessToken };
-
-  // TODO @Shinigami92 2024-09-10: Common... don't do this
-  env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
   return {
     v1: buildV1(internalOptions),

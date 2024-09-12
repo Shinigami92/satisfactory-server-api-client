@@ -2,6 +2,8 @@
 import { env } from "node:process";
 import { createClient } from "./dist/index.js";
 
+env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
 const client = createClient({
   accessToken: env.ACCESS_TOKEN,
 });
