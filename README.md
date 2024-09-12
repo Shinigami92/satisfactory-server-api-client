@@ -1,5 +1,7 @@
 # Satisfactory Server API Client
 
+![Satisfactory](https://raw.githubusercontent.com/Shinigami92/satisfactory-server-api-client/main/.github/logo.png "Satisfactory logo")
+
 [![npm version](https://badgen.net/npm/v/satisfactory-server-api-client)](https://www.npmjs.com/package/satisfactory-server-api-client)
 [![npm downloads](https://badgen.net/npm/dm/satisfactory-server-api-client)](https://www.npmjs.com/package/satisfactory-server-api-client)
 
