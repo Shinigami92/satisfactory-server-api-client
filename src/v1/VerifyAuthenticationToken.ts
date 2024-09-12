@@ -6,6 +6,9 @@ export type VerifyAuthenticationTokenRequest =
 
 export type VerifyAuthenticationTokenResponse = string;
 
+/**
+ * @internal
+ */
 export const buildVerifyAuthenticationToken = buildApiRequest<
   VerifyAuthenticationTokenRequest,
   VerifyAuthenticationTokenResponse

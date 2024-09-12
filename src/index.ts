@@ -14,7 +14,11 @@ export interface ClientOptions {
   accessToken: string;
 }
 
-export function createClient(options: ClientOptions) {
+export interface Client {
+  readonly v1: ReturnType<typeof buildV1>;
+}
+
+export function createClient(options: ClientOptions): Client {
   const { baseUrl = "https://localhost:7777/api", accessToken } = options;
 
   if (!accessToken) {

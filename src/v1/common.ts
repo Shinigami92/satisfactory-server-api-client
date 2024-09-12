@@ -20,6 +20,9 @@ export interface ApiSuccessResponse<TData> {
 
 export type BooleanString = "True" | "False";
 
+/**
+ * @internal
+ */
 export function buildApiRequest<
   TRequest extends ApiRequest<string, unknown>,
   TResponse extends ApiSuccessResponse<unknown> | string

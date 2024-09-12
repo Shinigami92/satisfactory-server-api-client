@@ -5,6 +5,7 @@
     "strict": true,
     "outDir": "dist",
     "declaration": true,
+    "stripInternal": true,
     "verbatimModuleSyntax": true
   }
 }

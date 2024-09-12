@@ -29,6 +29,9 @@ export type GetServerOptionsResponseData = {
 export type GetServerOptionsResponse =
   ApiSuccessResponse<GetServerOptionsResponseData>;
 
+/**
+ * @internal
+ */
 export const buildGetServerOptions = buildApiRequest<
   GetServerOptionsRequest,
   GetServerOptionsResponse
