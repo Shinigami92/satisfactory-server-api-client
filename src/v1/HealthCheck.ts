@@ -24,9 +24,6 @@ export type HealthCheckResponseData = {
 
 export type HealthCheckResponse = ApiSuccessResponse<HealthCheckResponseData>;
 
-/**
- * @internal
- */
 export const buildHealthCheck = buildApiRequest<
   HealthCheckRequest,
   HealthCheckResponse

@@ -58,9 +58,6 @@ export type QueryServerStateResponseData = {
 export type QueryServerStateResponse =
   ApiSuccessResponse<QueryServerStateResponseData>;
 
-/**
- * @internal
- */
 export const buildQueryServerState = buildApiRequest<
   QueryServerStateRequest,
   QueryServerStateResponse

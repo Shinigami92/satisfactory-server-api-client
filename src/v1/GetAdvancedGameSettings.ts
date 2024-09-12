@@ -36,9 +36,6 @@ export type GetAdvancedGameSettingsResponseData = {
 export type GetAdvancedGameSettingsResponse =
   ApiSuccessResponse<GetAdvancedGameSettingsResponseData>;
 
-/**
- * @internal
- */
 export const buildGetAdvancedGameSettings = buildApiRequest<
   GetAdvancedGameSettingsRequest,
   GetAdvancedGameSettingsResponse

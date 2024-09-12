@@ -5,9 +5,6 @@ import { buildHealthCheck } from "./HealthCheck.js";
 import { buildQueryServerState } from "./QueryServerState.js";
 import { buildVerifyAuthenticationToken } from "./VerifyAuthenticationToken.js";
 
-/**
- * @internal
- */
 export function buildV1(options: InternalClientOptions) {
   return {
     /**

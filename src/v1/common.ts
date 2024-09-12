@@ -20,9 +20,6 @@ export interface ApiSuccessResponse<TData> {
 
 export type BooleanString = "True" | "False";
 
-/**
- * @internal
- */
 export function buildApiRequest<
   TRequest extends ApiRequest<string, unknown>,
   TResponse extends ApiSuccessResponse<unknown> | string
@@ -42,9 +39,6 @@ export function buildApiRequest<
         .json<TResponse>();
 }
 
-/**
- * @internal
- */
 export interface InternalClientOptions {
   /**
    * Base URL of the API server.
