@@ -2,6 +2,7 @@ import type { InternalClientOptions } from "./common.js";
 import { buildGetAdvancedGameSettings } from "./GetAdvancedGameSettings.js";
 import { buildGetServerOptions } from "./GetServerOptions.js";
 import { buildHealthCheck } from "./HealthCheck.js";
+import { buildPasswordlessLogin } from "./PasswordlessLogin.js";
 import { buildQueryServerState } from "./QueryServerState.js";
 import { buildVerifyAuthenticationToken } from "./VerifyAuthenticationToken.js";
 
@@ -19,6 +20,14 @@ export function buildV1(options: InternalClientOptions) {
      * This function does not require input parameters and does not return any data.
      */
     VerifyAuthenticationToken: buildVerifyAuthenticationToken(options),
+    /**
+     * Attempts to perform a passwordless login to the Dedicated Server as a player.
+     *
+     * Passwordless login is possible if the Dedicated Server is not claimed, or if Client Protection Password is not set for the Dedicated Server.
+     *
+     * This function requires no Authentication.
+     */
+    PasswordlessLogin: buildPasswordlessLogin(options),
     /**
      * Retrieves the current state of the Dedicated Server.
      */
@@ -39,5 +48,6 @@ export type * from "./error.js";
 export type * from "./GetAdvancedGameSettings.js";
 export type * from "./GetServerOptions.js";
 export type * from "./HealthCheck.js";
+export type * from "./PasswordlessLogin.js";
 export type * from "./QueryServerState.js";
 export type * from "./VerifyAuthenticationToken.js";

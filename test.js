@@ -1,6 +1,6 @@
 // @ts-check
 import { env } from "node:process";
-import { createClient } from "./dist/index.js";
+import { createClient, PrivilegeLevel } from "./dist/index.js";
 
 env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
@@ -33,3 +33,13 @@ client.v1.GetServerOptions().then((response) => {
 client.v1.GetAdvancedGameSettings().then((response) => {
   console.log("GetAdvancedGameSettings Response:", response);
 });
+
+client.v1
+  .PasswordlessLogin({
+    data: {
+      minimumPrivilegeLevel: PrivilegeLevel.NotAuthenticated,
+    },
+  })
+  .then((response) => {
+    console.log("PasswordlessLogin Response:", response);
+  });

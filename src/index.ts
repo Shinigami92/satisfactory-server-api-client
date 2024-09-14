@@ -1,5 +1,6 @@
 export { createClient } from "./client.js";
 export type { Client, ClientOptions } from "./client.js";
+export { PrivilegeLevel } from "./v1/common.js";
 export type {
   ApiRequest,
   ApiSuccessResponse,
@@ -17,6 +18,9 @@ export type {
   InsufficientScopeErrorResponse,
   InvalidTokenErrorResponse,
   MissingParamsErrorResponse,
+  PasswordlessLoginRequest,
+  PasswordlessLoginResponse,
+  PasswordlessLoginResponseData,
   QueryServerStateRequest,
   QueryServerStateResponse,
   QueryServerStateResponseData,

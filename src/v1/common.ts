@@ -49,3 +49,26 @@ export interface InternalClientOptions {
    */
   accessToken: string;
 }
+
+export enum PrivilegeLevel {
+  /**
+   * The client is not Authenticated.
+   */
+  NotAuthenticated = "NotAuthenticated",
+  /**
+   * Client is Authenticated with Client privileges.
+   */
+  Client = "Client",
+  /**
+   * Client is Authenticated with Admin privileges.
+   */
+  Administrator = "Administrator",
+  /**
+   * Client is Authenticated as Initial Admin with privileges to Claim the server.
+   */
+  InitialAdmin = "InitialAdmin",
+  /**
+   * Client is Authenticated as Third Party Application.
+   */
+  APIToken = "APIToken",
+}
