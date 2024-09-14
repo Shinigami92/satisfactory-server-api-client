@@ -52,4 +52,14 @@ client.v1.GetServerOptions().then((response) => {
 client.v1.GetAdvancedGameSettings().then((response) => {
   console.log("GetAdvancedGameSettings Response:", response);
 });
+
+client.v1
+  .PasswordlessLogin({
+    data: {
+      minimumPrivilegeLevel: PrivilegeLevel.NotAuthenticated,
+    },
+  })
+  .then((response) => {
+    console.log("PasswordlessLogin Response:", response);
+  });
 ```

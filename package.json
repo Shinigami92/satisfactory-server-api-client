@@ -1,6 +1,6 @@
 {
   "name": "satisfactory-server-api-client",
-  "version": "0.4.4",
+  "version": "0.5.0",
   "description": "Universal Satisfactory Server API client for JavaScript",
   "scripts": {
     "clean": "rimraf dist node_modules",
@@ -54,8 +54,8 @@
     "ky": "^1.7.2"
   },
   "devDependencies": {
-    "@types/node": "22.5.4",
-    "npm-run-all2": "6.2.2",
+    "@types/node": "22.5.5",
+    "npm-run-all2": "6.2.3",
     "rimraf": "6.0.1",
     "typescript": "5.6.2"
   },
