@@ -73,4 +73,16 @@ client.v1
   .then((response) => {
     console.log("PasswordLogin Response:", response);
   });
+
+client.v1
+  .ApplyAdvancedGameSettings({
+    data: {
+      appliedAdvancedGameSettings: {
+        "FG.GameRules.NoPower": "False",
+      },
+    },
+  })
+  .then((response) => {
+    console.log("ApplyAdvancedGameSettings Response:", typeof response);
+  });
 ```

@@ -1,3 +1,4 @@
+import { buildApplyAdvancedGameSettings } from "./ApplyAdvancedGameSettings.js";
 import type { InternalClientOptions } from "./common.js";
 import { buildGetAdvancedGameSettings } from "./GetAdvancedGameSettings.js";
 import { buildGetServerOptions } from "./GetServerOptions.js";
@@ -47,9 +48,16 @@ export function buildV1(options: InternalClientOptions) {
      * Retrieves currently applied advanced game settings.
      */
     GetAdvancedGameSettings: buildGetAdvancedGameSettings(options),
+    /**
+     * Applies new values to the provided Advanced Game Settings properties.
+     *
+     * Will automatically enable Advanced Game Settings for the currently loaded save if they are not enabled already.
+     */
+    ApplyAdvancedGameSettings: buildApplyAdvancedGameSettings(options),
   };
 }
 
+export type * from "./ApplyAdvancedGameSettings.js";
 export type * from "./common.js";
 export type * from "./error.js";
 export type * from "./GetAdvancedGameSettings.js";

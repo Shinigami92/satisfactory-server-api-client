@@ -4,6 +4,8 @@ export { PrivilegeLevel } from "./v1/common.js";
 export type {
   ApiRequest,
   ApiSuccessResponse,
+  ApplyAdvancedGameSettingsRequest,
+  ApplyAdvancedGameSettingsResponse,
   BooleanString,
   ErrorResponse,
   GetAdvancedGameSettingsRequest,
