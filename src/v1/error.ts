@@ -48,3 +48,7 @@ export interface PasswordInUseErrorResponse extends ErrorResponse {
 export interface CannotResetAdminPasswordErrorResponse extends ErrorResponse {
   errorCode: "cannot_reset_admin_password";
 }
+
+export interface SaveGameFailedErrorResponse extends ErrorResponse {
+  errorCode: "save_game_failed";
+}

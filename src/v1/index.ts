@@ -11,6 +11,7 @@ import { buildPasswordLogin } from "./PasswordLogin.js";
 import { buildQueryServerState } from "./QueryServerState.js";
 import { buildRenameServer } from "./RenameServer.js";
 import { buildRunCommand } from "./RunCommand.js";
+import { buildSaveGame } from "./SaveGame.js";
 import { buildSetAdminPassword } from "./SetAdminPassword.js";
 import { buildSetAutoLoadSessionName } from "./SetAutoLoadSessionName.js";
 import { buildSetClientPassword } from "./SetClientPassword.js";
@@ -147,6 +148,16 @@ export function buildV1(options: InternalClientOptions) {
      * Function does not return any data on success.
      */
     CreateNewGame: buildCreateNewGame(options),
+    /**
+     * Saves the currently loaded session into the new save game file named as the argument.
+     *
+     * Requires Admin privileges.
+     *
+     * SaveName might be changed to satisfy file system restrictions on file names.
+     *
+     * Function does not return any data on success.
+     */
+    SaveGame: buildSaveGame(options),
   };
 }
 
@@ -164,6 +175,7 @@ export type * from "./PasswordLogin.js";
 export type * from "./QueryServerState.js";
 export type * from "./RenameServer.js";
 export type * from "./RunCommand.js";
+export type * from "./SaveGame.js";
 export type * from "./SetAdminPassword.js";
 export type * from "./SetAutoLoadSessionName.js";
 export type * from "./SetClientPassword.js";
