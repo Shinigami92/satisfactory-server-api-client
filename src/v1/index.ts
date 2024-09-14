@@ -9,6 +9,7 @@ import { buildPasswordLogin } from "./PasswordLogin.js";
 import { buildQueryServerState } from "./QueryServerState.js";
 import { buildRenameServer } from "./RenameServer.js";
 import { buildSetAdminPassword } from "./SetAdminPassword.js";
+import { buildSetAutoLoadSessionName } from "./SetAutoLoadSessionName.js";
 import { buildSetClientPassword } from "./SetClientPassword.js";
 import { buildVerifyAuthenticationToken } from "./VerifyAuthenticationToken.js";
 
@@ -98,6 +99,16 @@ export function buildV1(options: InternalClientOptions) {
      * Function does not return any data on success.
      */
     SetAdminPassword: buildSetAdminPassword(options),
+    /**
+     * Updates the name of the session that the Dedicated Server will automatically load on startup.
+     *
+     * Does not change currently loaded session.
+     *
+     * Requires Admin privileges.
+     *
+     * Function does not return any data on success.
+     */
+    SetAutoLoadSessionName: buildSetAutoLoadSessionName(options),
   };
 }
 
@@ -113,5 +124,6 @@ export type * from "./PasswordLogin.js";
 export type * from "./QueryServerState.js";
 export type * from "./RenameServer.js";
 export type * from "./SetAdminPassword.js";
+export type * from "./SetAutoLoadSessionName.js";
 export type * from "./SetClientPassword.js";
 export type * from "./VerifyAuthenticationToken.js";

@@ -40,6 +40,8 @@ export type {
   ServerNotClaimedErrorResponse,
   SetAdminPasswordRequest,
   SetAdminPasswordResponse,
+  SetAutoLoadSessionNameRequest,
+  SetAutoLoadSessionNameResponse,
   SetClientPasswordRequest,
   SetClientPasswordResponse,
   VerifyAuthenticationTokenRequest,
