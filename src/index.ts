@@ -35,4 +35,7 @@ export type {
   VerifyAuthenticationTokenRequest,
   VerifyAuthenticationTokenResponse,
   WrongPasswordErrorResponse,
+  RenameServerRequest,
+  RenameServerResponse,
+  ServerClaimedErrorResponse,
 } from "./v1/index.js";

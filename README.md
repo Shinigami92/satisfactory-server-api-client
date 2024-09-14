@@ -96,4 +96,14 @@ client.v1
   .then((response) => {
     console.log("ClaimServer Response:", response);
   });
+
+client.v1
+  .RenameServer({
+    data: {
+      serverName: "Shinigami-PC localhost",
+    },
+  })
+  .then(() => {
+    // response will be an empty string if valid
+  });
 ```

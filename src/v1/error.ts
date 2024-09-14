@@ -36,3 +36,7 @@ export interface WrongPasswordErrorResponse extends ErrorResponse {
 export interface ServerClaimedErrorResponse extends ErrorResponse {
   errorCode: "server_claimed";
 }
+
+export interface ServerNotClaimedErrorResponse extends ErrorResponse {
+  errorCode: "server_not_claimed";
+}

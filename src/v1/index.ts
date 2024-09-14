@@ -7,6 +7,7 @@ import { buildHealthCheck } from "./HealthCheck.js";
 import { buildPasswordlessLogin } from "./PasswordlessLogin.js";
 import { buildPasswordLogin } from "./PasswordLogin.js";
 import { buildQueryServerState } from "./QueryServerState.js";
+import { buildRenameServer } from "./RenameServer.js";
 import { buildVerifyAuthenticationToken } from "./VerifyAuthenticationToken.js";
 
 export function buildV1(options: InternalClientOptions) {
@@ -65,6 +66,14 @@ export function buildV1(options: InternalClientOptions) {
      * The client should drop InitialAdmin privileges after that and use returned AuthenticationToken instead, and update it's cached server game state by calling QueryServerState.
      */
     ClaimServer: buildClaimServer(options),
+    /**
+     * Renames the Dedicated Server once it has been claimed.
+     *
+     * Requires Admin privileges.
+     *
+     * Function does not return any data on success.
+     */
+    RenameServer: buildRenameServer(options),
   };
 }
 
@@ -78,4 +87,5 @@ export type * from "./HealthCheck.js";
 export type * from "./PasswordlessLogin.js";
 export type * from "./PasswordLogin.js";
 export type * from "./QueryServerState.js";
+export type * from "./RenameServer.js";
 export type * from "./VerifyAuthenticationToken.js";

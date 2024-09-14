@@ -77,3 +77,13 @@ client.v1
   .then((response) => {
     console.log("ClaimServer Response:", response);
   });
+
+client.v1
+  .RenameServer({
+    data: {
+      serverName: "Shinigami-PC localhost",
+    },
+  })
+  .then((response) => {
+    console.log("RenameServer Response:", typeof response);
+  });

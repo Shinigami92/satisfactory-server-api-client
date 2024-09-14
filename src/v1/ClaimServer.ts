@@ -5,11 +5,11 @@ export type ClaimServerRequest = ApiRequest<
   "ClaimServer",
   {
     /**
-     * 	New name of the Dedicated Server.
+     * New name of the Dedicated Server.
      */
     serverName: string;
     /**
-     * 	Admin Password to set on the Dedicated Server, in plaintext.
+     * Admin Password to set on the Dedicated Server, in plaintext.
      */
     adminPassword: string;
   }
