@@ -82,7 +82,18 @@ client.v1
       },
     },
   })
+  .then(() => {
+    // response will be an empty string if valid
+  });
+
+client.v1
+  .ClaimServer({
+    data: {
+      serverName: "your-server",
+      adminPassword: "your-password",
+    },
+  })
   .then((response) => {
-    console.log("ApplyAdvancedGameSettings Response:", typeof response);
+    console.log("ClaimServer Response:", response);
   });
 ```

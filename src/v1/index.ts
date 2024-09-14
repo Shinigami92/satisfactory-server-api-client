@@ -1,4 +1,5 @@
 import { buildApplyAdvancedGameSettings } from "./ApplyAdvancedGameSettings.js";
+import { buildClaimServer } from "./ClaimServer.js";
 import type { InternalClientOptions } from "./common.js";
 import { buildGetAdvancedGameSettings } from "./GetAdvancedGameSettings.js";
 import { buildGetServerOptions } from "./GetServerOptions.js";
@@ -54,10 +55,21 @@ export function buildV1(options: InternalClientOptions) {
      * Will automatically enable Advanced Game Settings for the currently loaded save if they are not enabled already.
      */
     ApplyAdvancedGameSettings: buildApplyAdvancedGameSettings(options),
+    /**
+     * Claims this Dedicated Server if it is not claimed.
+     *
+     * Requires InitialAdmin privilege level, which can only be acquired by attempting passwordless login while the server does not have an Admin Password set, e.g. it is not claimed yet.
+     *
+     * Function does not return any data in case of success, and the server is claimed.
+     *
+     * The client should drop InitialAdmin privileges after that and use returned AuthenticationToken instead, and update it's cached server game state by calling QueryServerState.
+     */
+    ClaimServer: buildClaimServer(options),
   };
 }
 
 export type * from "./ApplyAdvancedGameSettings.js";
+export type * from "./ClaimServer.js";
 export type * from "./common.js";
 export type * from "./error.js";
 export type * from "./GetAdvancedGameSettings.js";

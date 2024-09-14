@@ -66,3 +66,14 @@ client.v1
   .then((response) => {
     console.log("ApplyAdvancedGameSettings Response:", typeof response);
   });
+
+client.v1
+  .ClaimServer({
+    data: {
+      serverName: "your-server",
+      adminPassword: "your-password",
+    },
+  })
+  .then((response) => {
+    console.log("ClaimServer Response:", response);
+  });

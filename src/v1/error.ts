@@ -15,12 +15,10 @@ export interface ErrorResponse {
 
 export interface InvalidTokenErrorResponse extends ErrorResponse {
   errorCode: "invalid_token";
-  errorMessage: "Token has expired";
 }
 
 export interface InsufficientScopeErrorResponse extends ErrorResponse {
   errorCode: "insufficient_scope";
-  errorMessage: "The client is missing required privileges to access the given function";
 }
 
 export interface MissingParamsErrorResponse extends ErrorResponse {
@@ -33,5 +31,8 @@ export interface MissingParamsErrorResponse extends ErrorResponse {
 
 export interface WrongPasswordErrorResponse extends ErrorResponse {
   errorCode: "wrong_password";
-  errorMessage: string;
+}
+
+export interface ServerClaimedErrorResponse extends ErrorResponse {
+  errorCode: "server_claimed";
 }
