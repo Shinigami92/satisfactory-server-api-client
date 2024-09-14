@@ -47,4 +47,7 @@ export type {
   VerifyAuthenticationTokenRequest,
   VerifyAuthenticationTokenResponse,
   WrongPasswordErrorResponse,
+  RunCommandRequest,
+  RunCommandResponse,
+  RunCommandResponseData,
 } from "./v1/index.js";
