@@ -6,6 +6,8 @@ export type {
   ApiSuccessResponse,
   ApplyAdvancedGameSettingsRequest,
   ApplyAdvancedGameSettingsResponse,
+  ApplyServerOptionsRequest,
+  ApplyServerOptionsResponse,
   BooleanString,
   CannotResetAdminPasswordErrorResponse,
   ClaimServerRequest,

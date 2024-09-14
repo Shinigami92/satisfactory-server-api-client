@@ -1,4 +1,5 @@
 import { buildApplyAdvancedGameSettings } from "./ApplyAdvancedGameSettings.js";
+import { buildApplyServerOptions } from "./ApplyServerOptions.js";
 import { buildClaimServer } from "./ClaimServer.js";
 import type { InternalClientOptions } from "./common.js";
 import { buildGetAdvancedGameSettings } from "./GetAdvancedGameSettings.js";
@@ -129,10 +130,19 @@ export function buildV1(options: InternalClientOptions) {
      * Function does not return any data on success, and does not take any parameters.
      */
     Shutdown: buildShutdown(options),
+    /**
+     * Applies new Server Options to the Dedicated Server.
+     *
+     * Requires Admin privileges.
+     *
+     * Function does not return any data on success.
+     */
+    ApplyServerOptions: buildApplyServerOptions(options),
   };
 }
 
 export type * from "./ApplyAdvancedGameSettings.js";
+export type * from "./ApplyServerOptions.js";
 export type * from "./ClaimServer.js";
 export type * from "./common.js";
 export type * from "./error.js";
@@ -145,7 +155,7 @@ export type * from "./QueryServerState.js";
 export type * from "./RenameServer.js";
 export type * from "./RunCommand.js";
 export type * from "./SetAdminPassword.js";
-export type * from "./Shutdown.js";
 export type * from "./SetAutoLoadSessionName.js";
 export type * from "./SetClientPassword.js";
+export type * from "./Shutdown.js";
 export type * from "./VerifyAuthenticationToken.js";
