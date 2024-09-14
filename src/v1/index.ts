@@ -8,6 +8,7 @@ import { buildPasswordlessLogin } from "./PasswordlessLogin.js";
 import { buildPasswordLogin } from "./PasswordLogin.js";
 import { buildQueryServerState } from "./QueryServerState.js";
 import { buildRenameServer } from "./RenameServer.js";
+import { buildSetClientPassword } from "./SetClientPassword.js";
 import { buildVerifyAuthenticationToken } from "./VerifyAuthenticationToken.js";
 
 export function buildV1(options: InternalClientOptions) {
@@ -74,6 +75,18 @@ export function buildV1(options: InternalClientOptions) {
      * Function does not return any data on success.
      */
     RenameServer: buildRenameServer(options),
+    /**
+     * Updates the currently set Client Protection Password.
+     *
+     * This will invalidate all previously issued Client authentication tokens.
+     *
+     * Pass empty string to remove the password, and let anyone join the server as Client.
+     *
+     * Requires Admin privileges.
+     *
+     * Function does not return any data on success.
+     */
+    SetClientPassword: buildSetClientPassword(options),
   };
 }
 
@@ -88,4 +101,5 @@ export type * from "./PasswordlessLogin.js";
 export type * from "./PasswordLogin.js";
 export type * from "./QueryServerState.js";
 export type * from "./RenameServer.js";
+export type * from "./SetClientPassword.js";
 export type * from "./VerifyAuthenticationToken.js";

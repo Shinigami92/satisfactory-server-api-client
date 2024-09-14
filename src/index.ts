@@ -38,4 +38,8 @@ export type {
   RenameServerRequest,
   RenameServerResponse,
   ServerClaimedErrorResponse,
+  PasswordInUseErrorResponse,
+  ServerNotClaimedErrorResponse,
+  SetClientPasswordRequest,
+  SetClientPasswordResponse,
 } from "./v1/index.js";

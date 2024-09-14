@@ -40,3 +40,7 @@ export interface ServerClaimedErrorResponse extends ErrorResponse {
 export interface ServerNotClaimedErrorResponse extends ErrorResponse {
   errorCode: "server_not_claimed";
 }
+
+export interface PasswordInUseErrorResponse extends ErrorResponse {
+  errorCode: "password_in_use";
+}
