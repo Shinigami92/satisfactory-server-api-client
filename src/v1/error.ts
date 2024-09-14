@@ -30,3 +30,8 @@ export interface MissingParamsErrorResponse extends ErrorResponse {
     invalidParameters: Record<string, unknown>;
   };
 }
+
+export interface WrongPasswordErrorResponse extends ErrorResponse {
+  errorCode: "wrong_password";
+  errorMessage: string;
+}

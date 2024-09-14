@@ -62,4 +62,15 @@ client.v1
   .then((response) => {
     console.log("PasswordlessLogin Response:", response);
   });
+
+client.v1
+  .PasswordLogin({
+    data: {
+      minimumPrivilegeLevel: PrivilegeLevel.NotAuthenticated,
+      password: "your-password",
+    },
+  })
+  .then((response) => {
+    console.log("PasswordLogin Response:", response);
+  });
 ```

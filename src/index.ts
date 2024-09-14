@@ -18,6 +18,9 @@ export type {
   InsufficientScopeErrorResponse,
   InvalidTokenErrorResponse,
   MissingParamsErrorResponse,
+  PasswordLoginRequest,
+  PasswordLoginResponse,
+  PasswordLoginResponseData,
   PasswordlessLoginRequest,
   PasswordlessLoginResponse,
   PasswordlessLoginResponseData,
@@ -26,4 +29,5 @@ export type {
   QueryServerStateResponseData,
   VerifyAuthenticationTokenRequest,
   VerifyAuthenticationTokenResponse,
+  WrongPasswordErrorResponse,
 } from "./v1/index.js";
