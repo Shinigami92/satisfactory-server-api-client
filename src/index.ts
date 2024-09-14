@@ -13,6 +13,8 @@ export type {
   ClaimServerRequest,
   ClaimServerResponse,
   ClaimServerResponseData,
+  CreateNewGameRequest,
+  CreateNewGameResponse,
   ErrorResponse,
   GetAdvancedGameSettingsRequest,
   GetAdvancedGameSettingsResponse,
