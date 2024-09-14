@@ -44,3 +44,7 @@ export interface ServerNotClaimedErrorResponse extends ErrorResponse {
 export interface PasswordInUseErrorResponse extends ErrorResponse {
   errorCode: "password_in_use";
 }
+
+export interface CannotResetAdminPasswordErrorResponse extends ErrorResponse {
+  errorCode: "cannot_reset_admin_password";
+}

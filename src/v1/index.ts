@@ -8,6 +8,7 @@ import { buildPasswordlessLogin } from "./PasswordlessLogin.js";
 import { buildPasswordLogin } from "./PasswordLogin.js";
 import { buildQueryServerState } from "./QueryServerState.js";
 import { buildRenameServer } from "./RenameServer.js";
+import { buildSetAdminPassword } from "./SetAdminPassword.js";
 import { buildSetClientPassword } from "./SetClientPassword.js";
 import { buildVerifyAuthenticationToken } from "./VerifyAuthenticationToken.js";
 
@@ -87,6 +88,16 @@ export function buildV1(options: InternalClientOptions) {
      * Function does not return any data on success.
      */
     SetClientPassword: buildSetClientPassword(options),
+    /**
+     * Updates the currently set Admin Password.
+     *
+     * This will invalidate all previously issued Client and Admin authentication tokens.
+     *
+     * Requires Admin privileges.
+     *
+     * Function does not return any data on success.
+     */
+    SetAdminPassword: buildSetAdminPassword(options),
   };
 }
 
@@ -101,5 +112,6 @@ export type * from "./PasswordlessLogin.js";
 export type * from "./PasswordLogin.js";
 export type * from "./QueryServerState.js";
 export type * from "./RenameServer.js";
+export type * from "./SetAdminPassword.js";
 export type * from "./SetClientPassword.js";
 export type * from "./VerifyAuthenticationToken.js";
