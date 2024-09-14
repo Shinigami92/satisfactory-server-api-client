@@ -12,6 +12,7 @@ import { buildRunCommand } from "./RunCommand.js";
 import { buildSetAdminPassword } from "./SetAdminPassword.js";
 import { buildSetAutoLoadSessionName } from "./SetAutoLoadSessionName.js";
 import { buildSetClientPassword } from "./SetClientPassword.js";
+import { buildShutdown } from "./Shutdown.js";
 import { buildVerifyAuthenticationToken } from "./VerifyAuthenticationToken.js";
 
 export function buildV1(options: InternalClientOptions) {
@@ -116,6 +117,18 @@ export function buildV1(options: InternalClientOptions) {
      * Requires Admin privileges.
      */
     RunCommand: buildRunCommand(options),
+    /**
+     * Shuts down the Dedicated Server.
+     *
+     * If automatic restart script is setup, this allows restarting the server to apply new settings or update.
+     *
+     * Requires Admin privileges.
+     *
+     * Shutdowns initiated by remote hosts are logged with their IP and their token.
+     *
+     * Function does not return any data on success, and does not take any parameters.
+     */
+    Shutdown: buildShutdown(options),
   };
 }
 
@@ -132,6 +145,7 @@ export type * from "./QueryServerState.js";
 export type * from "./RenameServer.js";
 export type * from "./RunCommand.js";
 export type * from "./SetAdminPassword.js";
+export type * from "./Shutdown.js";
 export type * from "./SetAutoLoadSessionName.js";
 export type * from "./SetClientPassword.js";
 export type * from "./VerifyAuthenticationToken.js";
