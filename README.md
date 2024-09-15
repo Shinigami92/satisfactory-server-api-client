@@ -10,7 +10,7 @@ This is an unofficial HTTP API wrapper for Satisfactory Dedicated Server API.
 The project is in an early state and will not document changelogs until v1.0.0 release.  
 If you want a specific API Endpoint prioritized, please open an issue.
 
-Official API Docs can be found at `Steam/steamapps/common/Satisfactory/CommunityResources/DedicatedServerAPIDocs.md` or at [GitHub wolveix/satisfactory-server Official API Docs](https://github.com/wolveix/satisfactory-server/wiki/Official-API-Docs).
+Official API Docs can be found at `Steam/steamapps/common/Satisfactory/CommunityResources/DedicatedServerAPIDocs.md` or at [satisfactory.wiki.gg HTTPS API](https://satisfactory.wiki.gg/wiki/Dedicated_servers/HTTPS_API).
 
 You can obtain an `accessToken` by executing `server.GenerateAPIToken` in your server console.
 
