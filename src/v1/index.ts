@@ -3,6 +3,7 @@ import { buildApplyServerOptions } from "./ApplyServerOptions.js";
 import { buildClaimServer } from "./ClaimServer.js";
 import type { InternalClientOptions } from "./common.js";
 import { buildCreateNewGame } from "./CreateNewGame.js";
+import { buildEnumerateSessions } from "./EnumerateSessions.js";
 import { buildGetAdvancedGameSettings } from "./GetAdvancedGameSettings.js";
 import { buildGetServerOptions } from "./GetServerOptions.js";
 import { buildHealthCheck } from "./HealthCheck.js";
@@ -158,6 +159,14 @@ export function buildV1(options: InternalClientOptions) {
      * Function does not return any data on success.
      */
     SaveGame: buildSaveGame(options),
+    /**
+     * Enumerates all save game files available on the Dedicated Server.
+     *
+     * Requires Admin privileges.
+     *
+     * Function does not require any additional parameters.
+     */
+    EnumerateSessions: buildEnumerateSessions(options),
   };
 }
 
@@ -166,6 +175,7 @@ export type * from "./ApplyServerOptions.js";
 export type * from "./ClaimServer.js";
 export type * from "./common.js";
 export type * from "./CreateNewGame.js";
+export type * from "./EnumerateSessions.js";
 export type * from "./error.js";
 export type * from "./GetAdvancedGameSettings.js";
 export type * from "./GetServerOptions.js";

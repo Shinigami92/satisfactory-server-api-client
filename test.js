@@ -87,3 +87,7 @@ client.v1
   .then((response) => {
     console.log("RenameServer Response:", typeof response);
   });
+
+client.v1.EnumerateSessions().then((response) => {
+  console.log("EnumerateSessions Response:", response);
+});

@@ -52,3 +52,7 @@ export interface CannotResetAdminPasswordErrorResponse extends ErrorResponse {
 export interface SaveGameFailedErrorResponse extends ErrorResponse {
   errorCode: "save_game_failed";
 }
+
+export interface EnumerateSessionsFailedErrorResponse extends ErrorResponse {
+  errorCode: "enumerate_sessions_failed";
+}

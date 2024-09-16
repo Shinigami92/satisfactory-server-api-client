@@ -106,4 +106,8 @@ client.v1
   .then(() => {
     // response will be an empty string if valid
   });
+
+client.v1.EnumerateSessions().then((response) => {
+  console.log("EnumerateSessions Response:", response);
+});
 ```
