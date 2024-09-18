@@ -111,3 +111,8 @@ client.v1.EnumerateSessions().then((response) => {
   console.log("EnumerateSessions Response:", response);
 });
 ```
+
+## See Also
+
+- [wolveix/satisfactory-server](https://github.com/wolveix/satisfactory-server) - A Docker image for running a Satisfactory Dedicated Server.
+- [satisfactory-server-prometheus-exporter](https://github.com/Shinigami92/satisfactory-server-prometheus-exporter) - A Prometheus Exporter for Satisfactory Dedicated Server.
